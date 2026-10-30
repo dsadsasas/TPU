@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# After deployment, add your actual absolute sitemap URL below:
+# Sitemap: https://YOUR-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml
