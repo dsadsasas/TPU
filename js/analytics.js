@@ -6,6 +6,8 @@
    Use GA4 Reports for visitors and pages; there is no custom dashboard.
 */
 (() => {
+  // Do not track locked preview visits. Successful sign-in reloads the page.
+  if (window.TPU_PREVIEW_LOCKED) return;
   const MEASUREMENT_ID = 'G-XXXXXXXXXX'; // <-- REPLACE WITH YOUR GOOGLE ANALYTICS ID
   const configured = /^G-[A-Z0-9]+$/.test(MEASUREMENT_ID) && MEASUREMENT_ID !== 'G-XXXXXXXXXX';
   const canLoad = configured && /^https?:$/.test(location.protocol);

@@ -1370,3 +1370,36 @@ td {
 .card-actions .read-link,.card-actions .pdf-link,#navigation>a:not(.button),.button.small {
   font-size:.875rem;
 }
+
+/* Temporary preview gate */
+.preview-gate {
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background: var(--pale);
+}
+.preview-card {
+  width: min(100%, 490px);
+  padding: clamp(24px, 5vw, 42px);
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 15px 45px #20365a0a;
+}
+.preview-card h1 { font-size: clamp(2rem, 6vw, 2.65rem); }
+.preview-form { display: grid; gap: 12px; margin-top: 26px; }
+.preview-form label { font-weight: 650; }
+.preview-form input {
+  width: 100%; min-width: 0; padding: 12px 14px;
+  font: inherit; border: 1px solid #bfcbe0; border-radius: 7px;
+}
+.preview-form .button:disabled { opacity: .65; cursor: wait; }
+.preview-error { color: #a32232; font-size: .9rem; margin: 0; }
+.preview-lock-button {
+  position: fixed; bottom: 16px; right: 16px; z-index: 30;
+  padding: 9px 15px; border: 1px solid var(--line); border-radius: 8px;
+  background: white; color: var(--blue); font-size: .875rem;
+  box-shadow: 0 3px 12px #20365a15;
+}

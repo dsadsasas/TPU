@@ -81,3 +81,12 @@ These same static files can be hosted on Netlify or Vercel without a build comma
 All questions and explanations are original sample content. Current test-format references are linked from the guides; always consult the test provider for admission requirements, allowed tools, and administration-specific rules. All ten PDFs contain the corresponding full sample guide and were rendered for visual inspection.
 
 All 15 HTML pages were checked for valid local links and anchors after removing the About page. One previously created file, `pdfs/act-math-formulas.pdf`, is currently absent from the workspace; its download links need that file restored or replaced. Metadata, category consistency, and PDF text were checked during the original build. Both JavaScript files passed syntax checks in JavaScriptCore without Node.js. The browser tool blocked file:// access in this environment, so live browser layout and interaction verification could not be completed here. Open index.html locally to review the actual site. Live GA4 receipt must be verified after adding your real ID and deploying.
+
+
+## Temporary password preview
+
+Every HTML page now has a temporary preview screen. It remembers successful access in sessionStorage for the current tab. Use **Lock preview** to clear access in that tab. If storage is blocked, access lasts only for the current page. Password entry requires a current browser with Web Crypto (HTTPS, localhost, or supported local-file browsing).
+
+This is a client-side convenience screen, not real access control: HTML source, direct PDFs, and repository files remain accessible. Use hosting-level authentication to protect private drafts. Analytics does not initialize on locked pages.
+
+To launch, change `ENABLE_PREVIEW_GATE` to `false` in `js/preview-gate.js` and push the change. To change the password, replace `PASSWORD_SHA256` with the SHA-256 hex digest of your new password. The password itself is not stored in the source. The existing ZIP and nested extracted folder are historical copies; publish the root project files.

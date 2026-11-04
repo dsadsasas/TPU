@@ -1,8 +1,15 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="en" data-preview-locked>
 <head>
 <meta charset="utf-8">
+<!-- Hidden by default to prevent a flash of guide content before the preview check. -->
+<style>
+html[data-preview-locked] body > :not(.preview-gate):not(noscript):not(script) { display: none !important; }
+html:not([data-preview-locked]) .preview-gate { display: none !important; }
+</style>
+<script src="js/preview-gate.js"></script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact | TestPrepUnraveled</title>
 
 <meta name="description" content="How to contact the creator of TestPrepUnraveled and suggest improvements to the free guides.">
@@ -16,7 +23,7 @@
 <script defer src="js/main.js"></script>
 <script defer src="js/analytics.js"></script>
 </head>
-<body><a class="skip-link" href="#main">Skip to content</a>
+<body><noscript><p>This preview needs JavaScript enabled to enter the password.</p></noscript><a class="skip-link" href="#main">Skip to content</a>
 <header class="site-header">
 <div class="container nav-wrap"><a class="brand" href="index.html" aria-label="TestPrepUnraveled home"><span class="brand-mark" aria-hidden="true">tu<span>↗</span></span><span>TestPrep<span class="brand-blue">Unraveled</span></span></a><button class="menu-toggle" aria-expanded="false" aria-controls="navigation" type="button">Menu <span aria-hidden="true">☰</span></button>
 <nav id="navigation" aria-label="Main navigation"><a href="index.html">Home</a><a href="sat-guides.html">SAT Guides</a><a href="act-guides.html">ACT Guides</a><a class="button small" href="index.html#popular-guides">Browse Free Guides <span aria-hidden="true">↗</span></a>
